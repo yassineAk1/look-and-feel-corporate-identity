@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background-color: var(--background-color-secondary);
+  font-family: var(--font-family);
+
+  display: grid;
+  grid-template-rows: 12vh 1fr 15vh;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-icons {
+  margin-top: 0.5rem;
+}
+
+.logo img {
+  height: 4rem;
+  margin-left: 1rem;
+}
+
+main {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button{
+margin-left: 1rem;
+align-self: flex-start; 
+display: inline-flex;
+}
+
+form input,
+button {
+  font-family: var(--font-family);
+}
+
+form input{
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1 rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section form {
+  width: 100%;
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--background-color-secondary);
+}
+
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--background-color, #fff);
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+}
+
+.edit-icon img {
+  width: 2.25rem; 
+  height: 2.25rem;
+}
+
+.save-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.save-button:hover {
+  background-color: #333;
+}
+
+.save-button:active {
+  transform: scale(0.98);
+}
