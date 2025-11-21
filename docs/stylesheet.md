@@ -4,7 +4,7 @@
 
 Je hebt na de Sprint Planning in Figma een styleguide gemaakt en een gezamenlijke stylesheet met de huisstijl van de opdrachtgever. Slechts één teamlid heeft de repo 'Look and Feel - Styleguide' voor deze opdracht geforkt. Hier staat de gezamenlijke stylesheet die jullie allemaal gaan gebruiken voor je eigen opdracht. 
 
-Vandaag ga je leren hoe je een gestructureerd CSS file kan maken met _classes_ en _Custom Properties_. 
+Vandaag ga je leren hoe je een gestructureerd CSS file kan maken met  _classes_ en _Custom Properties_. 
 
 ### Aanpak
 
@@ -15,10 +15,11 @@ Eerst ga je analyseren wat voor CSS strategie grote websites gebruiken. Daarna g
 Naarmate er meer CSS in je project komt, bijvoorbeeld als je gaat samenwerken aan een project, wordt het steeds belangrijker om een CSS strategie (met elkaar) te bepalen.
 
 ### Opdracht
-Onderzoek op 3 verschillende websites hoe CSS is toegepast voor een `h2` en `button` element. 
 
 ![](CSS-strategie.png)
 *Met behulp van de Devtools kun je onderzoeken wat de CSS strategie van een website is.*
+
+Onderzoek op 3 verschillende websites hoe CSS is toegepast voor een `h2` en `button` element, met onderstaande vragen.
 
 #### Beantwoord deze vragen op het whiteboard:
 - Welke element-selectoren en class-selectoren zijn gebruikt?
@@ -32,17 +33,17 @@ Onderzoek op 3 verschillende websites hoe CSS is toegepast voor een `h2` en `but
 
 
 ## Custom Properties
-Met Custom Properties kun je zelf een CSS `property` bedenken, daar een `value` in bewaren, en die op meerdere plekken gebruiken. Hiermee zorg je voor _DRY code_, wat de code beter leesbaar, makkelijker onderhoudbaar en sneller maakt. Dit is fijn voor de developers én de gebruikers.
+Met Custom Properties kun je zelf een CSS `property` bedenken, daar een `value` in bewaren, en die op meerdere plekken gebruiken. Hiermee zorg je voor _DRY code_, wat de code beter leesbaar, makkelijker onderhoudbaar en sneller maakt. Dit is vooral fijn voor developers.
 
 ```css
 .card {
-  --spacing: 1.2rem;
-  padding: var(--spacing);
-  margin: var(--spacing);
+  --ruimte: 1.2rem;
+  padding: var(--ruimte);
+  margin: var(--ruimte);
 }
 ```
 
-Sterker nog, je kunt de waardes dynamisch aanpassen, en op die manier slimme styling schrijven, zoals:
+Sterker nog, je kunt de values dynamisch aanpassen, en op die manier slimme styling schrijven, zoals:
 
 ```css
 .button {
@@ -55,40 +56,75 @@ Sterker nog, je kunt de waardes dynamisch aanpassen, en op die manier slimme sty
 }
 ```
 
-Veel tutorials gebruiken de `:root` selector (het hoogste element in de DOM; het `<html>` element bij een webpagina, het `<svg>` element bij een SVG bestand) om custom properties op te zetten. Door _inheritance_ in CSS zijn die properties in de hele onderliggende DOM bekend, maar custom properties zijn dus veel krachtiger dan alleen 'globale variabelen'. Je kunt hiermee snel verschillende stijlen voor bijvoorbeeld een knop maken:
+Veel tutorials gebruiken de `:root` selector (het _hoogste_ element in de DOM) om custom properties op te zetten. Door _inheritance_ in CSS zijn die properties in de hele onderliggende DOM bekend:
 
 ```css
-.button {
-  --hue: 200;
-  --lightness: 30%;
-  background: hsl(var(--hue) 100% var(--lightness));
-  color: #fff;
-
-  &:hover, &:focus {
-    --lightness: 25%;
-  }
-
-  &:active {
-    --lightness: 20%;
-  }
+:root {
+  --primary-color: red;
+  --secondary-color: blue;
 }
-
-.button-ok {
-  --hue: 100;
+h1 {
+  color: var(--primary-color);
 }
-
-.button-cancel {
-  --hue: 20;
+p {
+  background-color: var(--primary-color);
 }
 ```
 
-Waarmee je bijvoorbeeld dit soort HTML kunt schrijven:
+Dit is hetzelfde als:
+
+```css
+html {
+  --primary-color: red;
+  --secondary-color: blue;
+}
+h1 {
+  color: var(--primary-color);
+}
+p {
+  background-color: var(--primary-color);
+}
+```
+
+De `:root` selector is dus 'gewoon' de `html` selector. Voor “globale variabelen”, die overal in je DOM beschikbaar moeten zijn, is dit een handige manier van custom properties gebruiken.
+
+Maar custom properties zijn veel krachtiger dan alleen globale variabelen. Je kunt hiermee snel verschillende stijlen voor bijvoorbeeld een knop maken, wat handig is in een styleguide.
+
+Met bijvoorbeeld de volgende HTML:
 
 ```html
 <button class="button">Knop</button>
 <button class="button button-ok">OK</button>
 <button class="button button-cancel">Annuleren</button>
 ```
+
+En deze CSS:
+
+```css
+.button {
+  --kleur: 200;
+  --lichtheid: 30%;
+  background: hsl(var(--kleur) 100% var(--lichtheid));
+  color: #fff;
+
+  &:hover, &:focus {
+    --lichtheid: 25%;
+  }
+
+  &:active {
+    --lichtheid: 20%;
+  }
+}
+
+.button-ok {
+  --kleur: 100;
+}
+.button-cancel {
+  --kleur: 20;
+}
+```
+
+Speel hier maar eens mee in bijvoorbeeld een CodePen of je Learning Journal.
 
 ### Opdracht
 
@@ -106,7 +142,6 @@ Schets het 'ontwerp' van jullie stylesheet op het whiteboard en noteer zo nodig 
 
 <!-- - [Breaking CSS Custom Properties out of :root Might Be a Good Idea](https://css-tricks.com/breaking-css-custom-properties-out-of-root-might-be-a-good-idea/) -->
 
-
 ### Opdracht Light & Dark mode (advanced)
 Als je al ervaring hebt met custom properties kun je proberen een Light & Dark mode te maken. 
 Een Light & Dark mode op de website helpt gebruikers om de website beter te kunnen bekijken in verschillende omstandigheden.
@@ -114,21 +149,19 @@ Een Light & Dark mode op de website helpt gebruikers om de website beter te kunn
 Implementeer een Dark Theme met custom properties die werkt op basis van de voorkeuren van de gebruiker. 
 Custom properties kunnen hierbij helpen om onnodige herhaling van bijvoorbeeld CSS values voor kleuren te voorkomen. 
 
-Gebruik het artikel [Dark Mode in CSS](https://css-tricks.com/dark-modes-with-css/). 
-
-Voor nog meer tips en tricks kun je het artikel [Dark Mode in 3 Lines of CSS and Other Adventures](https://dev.to/madsstoumann/dark-mode-in-3-lines-of-css-and-other-adventures-1ljj) lezen. 
-
+- Gebruik het artikel [Dark Mode in CSS](https://css-tricks.com/dark-modes-with-css/)
+- Voor nog meer tips en tricks kun je het artikel [CSS color-scheme-dependent colors with light-dark()](https://web.dev/articles/light-dark) lezen
+- CodePen voorbeeld van Sanne: https://codepen.io/shooft/pen/wBGajQZ
 
 ## CSS inladen
-Nu je met je team een gezamenlijke stylesheet hebt gemaakt, kan je deze gebruiken in jouw eigen project. 
-Voeg deze toe aan de `<head>` van je html document. 
-Dan heb je dus twee CSS files gelinkt, dat ziet er dan zo uit. 
+Nu je met je team een [gezamenlijke stylesheet hebt gemaakt](https://github.com/fdnd-task/look-and-feel-corporate-identity/blob/main/docs/styleguide.md#instructies-stylesheet) (en deze live hebt gezet via GitHub Pages), kan je deze gebruiken in jouw eigen project. 
+Voeg deze toe aan de `<head>` van je eigen HTML document in jouw project (en pas de juiste link aan). 
+Dan heb je dus twee CSS files gelinkt, wat er zo uit ziet:
 
 ```html
-<link rel="stylesheet" href="url-gezamenlijke-stylesheet.css">
+<link rel="stylesheet" href="https://githubnaam-van-de-forker-uit-jullie-team.github.io/look-and-feel-styleguide/styleguide.css">
 <link rel="stylesheet" href="style.css">
 ```
-
 
 ### CSS principes
 Maar welke styling wordt nu uitgevoerd als je `classes` gebruikt uit de huisstijl en uit je eigen stylesheet?
@@ -184,18 +217,20 @@ Wordt de kleur nu rood?
 De `<li>` blijft zwart want de selector `ul#web-technologies li` is specifieker dan de class selector `.favorite`. 
 De _weight_ van de class selector is `0 0 1 0`, de _weight_ van de gecombineerde selector is `0 1 0 2`. 10 < 102 ...
 
+💪🏼 In de voorbeeld stylesheet, die jullie geforkt hebben, staat `@layer`. Wist je dat je hiermee invloed kunt uitoefenen op de volgorde van de cascade? [Lees meer over Cascade Layers](https://css-tricks.com/css-cascade-layers/).
+
 
 ### Opdracht
 Voor deze opdracht ga je spelen met de CSS principes _Cascade_ en _Specificity_ om te leren hoe dat werkt. 
 Je gaat 4 experimenten doen. 
-Beantwoord de bijhorende vragen in je Learning log en probeer uit te leggen wat er gebeurt. 
+Beantwoord de bijhorende vragen in je Learning Journal en probeer uit te leggen wat er gebeurt. 
 
 Open je code editor en maak een blanco HTML pagina, noem het file `specificity.html`, en sla deze op in jouw i-love-web repo. 
 Maak een leeg CSS file, noem het `specificity.css`, sla het op in dezelfde map als het HTML file. 
 Voeg de gemeenschappelijke stylesheet toe in de `<head>` van het HTML file en daaronder het lege CSS file. 
 Dat ziet er dan zo uit in de HTML: 
 ```html
-<link rel="stylesheet" href="url-gezamenlijke-stylesheet.css">
+<link rel="stylesheet" href="https://de-forker-uit-jullie-team.github.io/look-and-feel-styleguide/styleguide.css">
 <link rel="stylesheet" href="specificity.css">
 ```
 
