@@ -91,7 +91,7 @@ form input {
   height: 100%;
   border-radius: 50%;
   display: block;
-  background-color: var(--background-color-secondary);
+  background-color: var(--background-color);
 }
 
 
@@ -159,4 +159,6 @@ form input {
 .footer-links a:hover {
   color: var(--textcolor);
 }
+
+/* ------------------detail-pagina-------------- */
 
