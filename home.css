@@ -290,7 +290,7 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  position: fixed;
+  position: sticky;
   z-index: 100;
   background: transparent;
 
@@ -465,11 +465,11 @@ p {
 }
 
 .chat-box {
-  position: fixed;
+  position: sticky;
   bottom: 90px;
-  right: 20px;
+  left: 30px;
   width: 280px;
-  height: 300px;
+  height: 280px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
