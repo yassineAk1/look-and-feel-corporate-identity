@@ -172,3 +172,61 @@ form input {
 .product-info > * {
   margin: 0; 
 }
+
+.product-gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.gallery-main {
+  position: relative;
+  aspect-ratio: 1 / 1; 
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.gallery-main .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: var(--background-color);
+  border-radius: 50%;
+  font-size: var(--h1-size);
+  cursor: pointer;
+}
+
+.gallery-main .prev { left: 20px; }
+.gallery-main .next { right: 20px; }
+
+
+.gallery-thumbs {
+  display: flex;
+  gap: 10px;
+  padding-left: 1rem;
+}
+
+.gallery-thumbs .thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.gallery-thumbs .thumb:hover {
+  border-color: var(--accentcolor);
+}
+
