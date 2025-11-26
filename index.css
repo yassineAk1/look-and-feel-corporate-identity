@@ -8,7 +8,8 @@ body {
   min-height: 100vh;
 }
 
-.form-header {
+.form-header,
+.detail-pagina-header {
   display: flex;
   justify-content: space-between;
 }
@@ -443,7 +444,54 @@ button {
   }
 }
 
-.legal,
+.legal
 p {
   padding: .5rem;
+}
+
+
+.product-details {
+  background: var(--background-color-secondary);
+  padding: 2rem 1.5rem;
+  max-width: 22rem;
+  font-family: var(--font-family);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.detail-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.detail-icon {
+  width: 3rem;
+  height: 3rem;
+  align-self: start;
+}
+
+.detail-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.detail-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--textcolor);
 }
