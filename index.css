@@ -491,10 +491,12 @@ button {
   margin: 0;
 }
 
-.map-figure img {
-  max-width: 100%;
+.map-figure img,
+.map-figure iframe {
+  border-radius: 15px;
+  width: 100%;
+  border: none;
 }
-
 /* --------------------------- */
 /* FOOTER detail pagina                */
 /* --------------------------- */
