@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 
-header {
+.form-header {
   display: flex;
   justify-content: space-between;
 }
@@ -239,8 +239,8 @@ button {
 .gallery-thumbs .thumb:hover {
   border-color: var(--accentcolor);
 }
-
-.shop-online {
+.shop-online, 
+.shop-in-person {
   background: var(--background-color-secondary);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -253,7 +253,7 @@ button {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  background: white;
+  background: var(--background-color);
   border-radius: 0.8rem;
   margin-bottom: 1rem;
 }
@@ -267,7 +267,7 @@ button {
 .shop-header p {
   margin: 0;
   color: var(--secondary-text-color);
-  font-size: 0.9rem;
+  font-size: var(--p-size);
 }
 
 .shop-list {
@@ -281,7 +281,7 @@ button {
 
 .shop-list li a {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   background: var(--background-color);
   padding: 1rem;
@@ -296,7 +296,21 @@ button {
   background: #f2f2f2;
 }
 
+.shop-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 
+.shop-name {
+  font-weight: 600;
+}
+
+.shop-distance {
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
 .shop-external {
   opacity: 0.6;
   font-size: 1rem;
