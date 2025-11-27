@@ -246,6 +246,7 @@ button {
   padding: 1.5rem;
   border-radius: 1rem;
   max-width: 22rem;
+  margin: 0 auto;
   font-family: var(--font-family);
 }
 
@@ -323,6 +324,7 @@ button {
   padding: 0rem 1.5rem;
   max-width: 22rem;
   font-family: var(--font-family);
+  margin: 0 auto;
 }
 
 .visually-hidden {
