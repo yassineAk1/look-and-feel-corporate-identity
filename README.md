@@ -11,7 +11,11 @@ Het resultaat is een basis die niet alleen aansluit bij de uitstraling van Mille
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+<!-- Voeg een link toe naar Github Pages 🌐-->  
+ik heb het design van de opdrachtgever verder uitgewerkt. Tijdens het proces heb ik ook gekeken naar toegankelijkheid en leesbaarheid.
+Bij een kleurencontrasttest kwam naar voren dat witte tekst op een gouden achtergrond bij de button niet voldeed aan de WCAG-richtlijnen. Dit betekende dat de tekst voor sommige gebruikers slecht leesbaar kon zijn. Om dit op te lossen heb ik de tekstkleur aangepast naar zwart. Deze aanpassing zorgt voor beter contrast en maakt de button toegankelijker, wat ook terug te zien is in het uiteindelijke ontwerp.
+<img width="388" height="860" alt="image" src="https://github.com/user-attachments/assets/016a2eea-79d8-4281-922e-69efe393f744" />
+
 <img width="562" height="938" alt="image" src="https://github.com/user-attachments/assets/23d8ae22-a53a-46a2-8867-535b787cc7b6" />
 <img width="562" height="912" alt="image" src="https://github.com/user-attachments/assets/1480e27e-4810-42ed-b776-99bbbc47d5db" />
 
