@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Milledoni</title>
+  <link rel="stylesheet" href="https://yassineak1.github.io/look-and-feel-styleguide/styleguide-milledoni.css" />
   <link rel="stylesheet" href="home.css">
 </head>
 
@@ -22,7 +23,7 @@
 
       <a href="index.html">
         <picture>
-          <source srcset="assets/addlist.svg" media="(min-width:1000px)">
+          <source srcset="assets/addlistfull.svg" media="(min-width:1000px)">
           <img class="addlist-icon" src="assets/Group 270 (5).svg" alt="saved gifts">
         </picture>
       </a>
@@ -36,104 +37,309 @@
 
   <main id="main" class="page-layout">
 
-
-    <form class="filters">
-      <fieldset>
-        <legend>I'm looking for a gift for...</legend>
-
-        <label for="relation">Who is it for?</label>
-        <select id="relation" name="relation">
-          <option value="">Select one</option>
-          <option value="boyfriend">Boyfriend</option>
-          <option value="girlfriend">Girlfriend</option>
-        </select>
-
-
-        <label for="age">Age</label>
-        <input id="age" type="number" name="age" placeholder="e.g. 25" min="0" max="120">
-
-        <label for="occasion">For which occasion?</label>
-        <select id="occasion" name="occasion">
-          <option value="">Select one</option>
-          <option value="birthday">Birthday</option>
-          <option value="anniversary">Anniversary</option>
-        </select>
-
-      </fieldset>
+    <form class="search-bar">
+      <h2 class="heading-search">
+        <span class="search-heading-line1">I'm looking for a gift for...</span>
+        <span class="highlight-text">my uncle</span>
+      </h2>
+      <div class="search-input-wrapper">
+        <label for="search-input" class="visually-hidden">chat bot</label>
+        <input type="search" id="search-input" name="q" placeholder="I search a gift for a...">
+        <button type="submit" aria-label="Submit your search">
+          <img src="assets/istockphoto-1333838449-612x612.jpg" alt="search bar icon">
+        </button>
+      </div>
+      <div class="community">
+        <img src="assets/Group 604.svg" alt="join our community of spotters">
+      </div>
     </form>
 
+
+
     <section class="gifts">
+      <div class="bow-decoration"></div>
+
       <h1>Get inspired by the world of Milledoni</h1>
 
-      <a href="detail.html" class="gift-listing">
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-1.svg" alt="Una bicicletta usata da restaurare insieme">
 
-        <img class="gift-img" src="assets/gift1.svg" alt="cozy cabin in the woods">
-        Weekend Trip to the forest
-        <img class="add-icon" src="assets/addicon.png" alt="add to list">
-        <img class="saved1-icon" src="assets/saved1.png" alt="amount of saves">
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
 
-      </a>
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
 
-      <a href="#" class="gift-listing">
-        Magic Lamp
-        <img class="gift-img" src="assets/gift2.svg" alt="lamp that floats in a hand">
-        <img class="add-icon" src="assets/addicon.png" alt="add to list">
-        <img class="saved2-icon" src="assets/saved2.png" alt="amount of saves">
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
 
-      </a>
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-2.svg" alt="Una bicicletta usata da restaurare insieme">
 
-      <a href="#" class="gift-listing">
-        Bike Ride through the woods
-        <img class="gift-img" src="assets/gift3.svg" alt="bicycle ride in the woods">
-        <img class="add-icon" src="assets/addicon.png" alt="add to list">
-        <img class="saved1-icon" src="assets/saved1.png" alt="amount of saves">
-      </a>
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag3.svg" alt="Sustainable">
+            </div>
+          </div>
 
-      <a href="#" class="gift-listing">
-        Snow ride with dogs
-        <img class="gift-img" src="assets/gift4.svg" alt="dogs pulling a sled in the snow">
-        <img class="add-icon" src="assets/addicon.png" alt="add to list">
-        <img class="saved2-icon" src="assets/saved2.png" alt="amount of saves">
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
 
-      </a>
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
 
-      <a href="#" class="gift-listing">
-        Candle
-        <img class="gift-img" src="assets/gift5.svg" alt="yellow candle smelling like old books">
-        <img class="add-icon" src="assets/addicon.png" alt="add to list">
-        <img class="saved1-icon" src="assets/saved1.png" alt="amount of saves">
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift5.svg" alt="Una bicicletta usata da restaurare insieme">
 
-      </a>
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
 
-      <a href="#" class="gift-listing">
-        Books
-        <img class="gift-img" src="assets/gift8.svg" alt="a pink and gray note book">
-        <img class="add-icon" src="assets/addicon.png" alt="add to list">
-        <img class="saved2-icon" src="assets/saved2.png" alt="amount of saves">
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
 
-      </a>
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-2.svg" alt="Una bicicletta usata da restaurare insieme">
+
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
+
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-1.svg" alt="Una bicicletta usata da restaurare insieme">
+
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
+
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-1.svg" alt="Una bicicletta usata da restaurare insieme">
+
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
+
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-1.svg" alt="Una bicicletta usata da restaurare insieme">
+
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
+
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-1.svg" alt="Una bicicletta usata da restaurare insieme">
+
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
+
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <article class="article-product">
+        <a href="index.html" class="gift-listing" aria-label="Una bicicletta usata da restaurare insieme">
+          <div class="article-product-img">
+            <img src="assets/gift-1.svg" alt="Una bicicletta usata da restaurare insieme">
+
+            <div class="article-tags" aria-label="Gift tags">
+              <img src="assets/tag1.svg" alt="Timeless">
+              <img src="assets/tag2.svg" alt="Sustainable">
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p class="product-title">Una bicicletta usata da restaurare insieme</p>
+            <div class="listing-footer" aria-label="listing footer">
+              <img src="assets/save-icons.svg" alt="saved icon" aria-hidden="true">
+              <span>+2 Saved</span>
+              <img src="assets/givenIcon.svg" alt="given icon" aria-hidden="true">
+              <span>+12 Given</span>
+            </div>
+          </div>
+        </a>
+
+        <button class="add-list" aria-label="Add to list">
+          <img src="assets/newadd.svg" alt="">
+        </button>
+      </article>
+
+      <nav class="pagination" aria-label="Pagination">
+        <ul>
+          <li>
+            <a href="#" aria-label="Previous page">‹</a>
+          </li>
+
+          <li>
+            <a href="#" aria-current="page">1</a>
+          </li>
+
+          <li>
+            <a href="#">2</a>
+          </li>
+
+          <li>
+            <a href="#">3</a>
+          </li>
+
+          <li>
+            <span class="ellipsis">…</span>
+          </li>
+
+          <li>
+            <a href="#">10</a>
+          </li>
+
+          <li>
+            <a href="#" aria-label="Next page">›</a>
+          </li>
+        </ul>
+      </nav>
+
     </section>
 
-<form class="search-bar">
-  <h2 class="heading-search">I'm looking for a gift for...</h2>
-  <div class="search-input-wrapper">
-    <label for="search-input" class="visually-hidden">chat bot</label>
-    <input type="search" id="search-input" name="q" placeholder="I search a gift for a...">
-    <button type="submit" aria-label="Submit your search">
-      <img src="assets/istockphoto-1333838449-612x612.jpg" alt="search bar icon">
-    </button>
-  </div>
-  <div class="community">
-    <img src="assets/Group 604.svg" alt="join our community of spotters">
-  </div>
-</form>
 
-<div class="chat-box">
-  <div class="chat-header">Gift Chat Assistant</div>
-  <div class="chat-body">
-    Hello! Who is the gift for? 🎁
-  </div>
-</div>
+
 
   </main>
 
@@ -159,9 +365,9 @@
 
     <nav class="footer-links" aria-label="Footer navigation">
 
-<div class="footer-logo-wrapper">
-  <img class="logo-footer" src="assets/fullLogo.svg" alt="milledoni logo">
-</div>
+      <div class="footer-logo-wrapper">
+        <img class="logo-footer" src="assets/fullLogo.svg" alt="milledoni logo">
+      </div>
 
       <section>
         <h3>Gifts</h3>
