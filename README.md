@@ -2,7 +2,7 @@
 Deze sprint stond in het teken van het toepassen van de huisstijl van de opdrachtgever en het daadwerkelijk tot leven brengen ervan.
 Om dit goed aan te pakken is er gezamenlijk een styleguide opgesteld. Deze gebruiken we als vaste leidraad voor onder andere kleuren, typografie en algemene vormgeving. Zo zorgen we ervoor dat iedereen op dezelfde manier werkt en de stijl overal gelijk blijft.
 
-[STYLEGUIDE]([https://yassineak1.github.io/all-human-accessible-website/](https://yassineak1.github.io/look-and-feel-styleguide/](https://yassineak1.github.io/look-and-feel-styleguide/))
+[STYLEGUIDE](https://yassineak1.github.io/look-and-feel-styleguide/)
 
 ## Wie is Milledoni?
 Milledoni is een online inspiratieplatform voor cadeaus, ontstaan vanuit de wens om het geven van cadeaus persoonlijker en makkelijker te maken. Het platform verzamelt cadeau-ideeën en ervaringen en matcht deze met kenmerken en interesses van de ontvanger. Binnen deze sprint lag de focus op het vertalen van hun visuele identiteit naar een digitale omgeving. Daarbij is gekeken naar hoe de stijl het beste toegepast kan worden op een manier die zowel duidelijk als gebruiksvriendelijk is.
