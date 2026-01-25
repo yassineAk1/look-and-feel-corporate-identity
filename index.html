@@ -1,78 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://yassineak1.github.io/look-and-feel-styleguide/styleguide-milledoni.css" />
-  <link rel="stylesheet" href="index.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account instellingen - Milledoni</title>
+    <link rel="stylesheet" href="https://yassineak1.github.io/look-and-feel-styleguide/styleguide-milledoni.css" />
+    <link rel="stylesheet" href="index.css"/>
 </head>
-
 <body>
-  <header class="form-header">
-    <a href="detail.html" class="logo">
-      <img src="assets/mobile-logo.svg" alt="milledoni Logo" />
-    </a>
-
-    <nav class="nav-icons">
-      <a href="#">
-        <img class="addlist-icon" src="assets/list.svg" alt="lists" /></a>
-
-      <a href="#"><img src="assets/profile.svg" alt="profile" /></a>
-    </nav>
-  </header>
-
-  <main>
-
- <a href="#" class="back-button font-l"><img src="assets/back.svg" alt="go back icon">Back</a>
+    <header class="form-header">
+      <a href="detail.html" class="logo" aria-label="Terug naar home">
+        <img src="assets/mobile-logo.svg" alt="Milledoni" />
+      </a>
+      <nav class="nav-icons" aria-label="Hoofdnavigatie"><a href="#" aria-label="Bekijk je lijsten"><img class="addlist-icon" src="assets/list.svg" alt=""/></a><a href="#" aria-label="Ga naar profiel"><img src="assets/profile.svg" alt=""/></a>
+      </nav>
+    </header>
     
- <div class="form-section">
-
-      <div class="profile-pic-container">
-        <img src="assets/profile.pic.svg" alt="Profile picture" class="profile-pic"/>
-        <button class="edit-icon">
-          <img src="assets/edit-profile.svg">
-        </button>
-      </div>
-
-      <form class="account-form">
-        <label class="form-group">
-          Display
-          <input type="text" placeholder="Frederica" value="" />
-        </label>
-
-        <label class="form-group">
-          Email
-          <input type="email" placeholder="Frederica97@gmail.com" value="" />
-        </label>
-
-        <label class="form-group">
-          Birthday
-          <input type="text" placeholder="Insert website link" />
-        </label>
-
-        <label class="form-group">
-          Country
-          <input type="text" placeholder="Australia" value="" />
-        </label>
-
-        <button type="submit" class="save-button">Save</button>
-      </form>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer">
-      <div>© 2025 Milledoni</div>
-      <div class="footer-links">
-        <a href="#">Term of service</a>
-        <a href="#">Privacy</a>
-        <a href="#">Credits</a>
-      </div>
-      <div class="language">🌐 Italiano</div>
-    </div>
-  </footer>
+    <main>
+        <a href="#" class="back-button font-l">
+            <img src="assets/back.svg" alt=""/>
+            Terug
+        </a>
+        
+        <section class="form-section">
+            <h1 class="visually-hidden">Account instellingen</h1>
+            
+            <div class="profile-pic-container">
+                <img src="assets/profile.pic.svg" alt="Profielfoto van Frederica" class="profile-pic"/>
+                <button class="edit-icon" aria-label="Profielfoto wijzigen">
+                    <img src="assets/edit-profile.svg" alt="" />
+                </button>
+            </div>
+            
+            <form class="account-form">
+                <div class="form-group">
+                    <label for="display-name">display</label>
+                    <input type="text" id="display-name" name="display-name" placeholder="Frederica" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" name="email" placeholder="Frederica97@gmail.com" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthday">Geboortedatum</label>
+                    <input type="date" id="birthday" name="birthday" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Land</label>
+                    <input type="text" id="country" name="country" placeholder="Australia" />
+                </div>
+                
+                <button type="submit" class="save-button">Opslaan</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <div>© 2025 Milledoni</div>
+            <nav class="footer-links">
+                <a href="#">Servicevoorwaarden</a>
+                <a href="#">Privacy</a>
+                <a href="#">Credits</a>
+            </nav>
+            <div class="language">
+                <span>🌐</span> Italiano
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
